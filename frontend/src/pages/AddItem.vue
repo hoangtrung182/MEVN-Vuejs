@@ -1,23 +1,28 @@
 <template>
     <div class="container">
+        <h1 class="text-center mb-3">ADD PRODUCTS</h1>
         <form @submit.prevent="onHandleSubmit">
-            <div class="mb-3">
-                <label class="form-label">Name</label> 
-                <input type="text" class="form-control" v-model="newItem.name" />
+            <div class="row">
+                <div class="mb-3 col-12 form-group">
+                    <label class="form-label">Name</label> 
+                    <input type="text" class="form-control" v-model="newItem.name" />
+                </div>
+                <div class="mb-3 col-12 form-group">
+                    <label class="form-label">Price</label>
+                    <input type="text" class="form-control" v-model="newItem.price"/>
+                </div>
+                <div class="mb-3 col-12 form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" v-model="newItem.description"></textarea>
+                </div>
+                <div class="mb-3 col-12 form-group">
+                    <label class="form-label">Image</label>
+                    <input type="text" class="form-control" v-model="newItem.image"/>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary" style="width: 80px;">Add</button>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Price</label>
-                <input type="text" class="form-control" v-model="newItem.price"/>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Description</label>
-                <textarea class="form-control" v-model="newItem.description"></textarea>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Image</label>
-                <input type="text" class="form-control" v-model="newItem.image"/>
-            </div>
-            <button type="submit" class="btn btn-primary">Add</button>
         </form>
     </div>
 </template>

@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const { Product } = require("../model/model");
+const { Product, Comment } = require("../model/model");
 
 const ProductSchema = Joi.object({
     name: Joi.string().trim().required(),
@@ -21,7 +21,8 @@ const ProductController = {
         try {
             const { id } = req.params;
             const product = await Product.findById(id);
-            res.status(200).json(product);
+            const allComments = await Comment.find({ productItem: id});
+            res.status(200).json({product, allComments});
         } catch (error) {
             res.status(500).json({ msg: error});
         }

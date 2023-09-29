@@ -3,12 +3,12 @@
 </script>
 
 <template>
-    <div>
-      <Navbar />
-      <router-view></router-view>
+    <div class="container mx-auto">
+        <Navbar />
+        <router-view></router-view>
     </div>
 </template>
 
-<style scoped>
+<style>
 
 </style>

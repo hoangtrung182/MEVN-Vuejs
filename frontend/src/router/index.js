@@ -4,6 +4,10 @@ import About from '../pages/About.vue';
 import ListItem from '../pages/ListItem.vue';
 import AddItem from '../pages/AddItem.vue';
 import UpdateItem from '../pages/UpdateItem.vue';
+import Register from '../pages/Register.vue';
+import Login from '../pages/Login.vue';
+import ProductItem from '../pages/ProductItem.vue';
+
 
 const routes = [
     { 
@@ -30,6 +34,21 @@ const routes = [
         path: '/admin/products/update/:id',
         name: 'Update item',
         component: UpdateItem
+    },
+    {
+        path: '/register',
+        name: 'Register Account',
+        component: Register
+    },
+    {
+        path: '/login',
+        name: 'Login Account',
+        component: Login
+    },
+    {
+        path: '/products/:id',
+        name: "Product item",
+        component: ProductItem
     }
 ]
 
